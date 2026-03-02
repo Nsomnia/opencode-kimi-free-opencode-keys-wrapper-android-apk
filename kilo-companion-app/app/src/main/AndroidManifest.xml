@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  =============================================================================
+  AndroidManifest.xml
+  =============================================================================
+  This is the core configuration file for the Android application.
+  It declares:
+  - App components (Activities, Services)
+  - Required permissions
+  - Intent filters (for OAuth interception)
+  - Hardware/software requirements
+  
+  IMPORTANT: Every Android app MUST have this file.
+  =============================================================================
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kilo.companion">
+
+    <!-- ========================================================================= -->
+    <!-- PERMISSIONS                                                               -->
+    <!-- ========================================================================= -->
+    <!-- Permissions tell Android what system resources the app needs access to.  -->
+    <!-- Users must grant these permissions for the app to function properly.     -->
+    <!-- ========================================================================= -->
+
+    <!-- Internet access - required for WebView and OAuth flows -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!-- Network state - allows checking if network is available -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Storage permissions for Android 10 (API 29) and below -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+
+    <!-- For Android 11+ (API 30+), we need MANAGE_EXTERNAL_STORAGE for broad access -->
+    <!-- This is required to access Documents/KiloWorkspace directory -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <!-- Access to all files on Android 13+ (API 33+) -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"
+        tools:ignore="SelectedPhotoAccess" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"
+        tools:ignore="SelectedPhotoAccess" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <!-- ========================================================================= -->
+    <!-- APPLICATION DECLARATION                                                   -->
+    <!-- ========================================================================= -->
+    <application
+        android:name=".KiloCompanionApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KiloCompanion"
+        android:requestLegacyExternalStorage="true"
+        tools:targetApi="34">
+
+        <!-- ===================================================================== -->
+        <!-- MAIN ACTIVITY                                                         -->
+        <!-- ===================================================================== -->
+        <!-- This is the entry point of the app - what users see when they tap   -->
+        <!-- the app icon. It hosts all the Compose UI screens via navigation.   -->
+        <!-- ===================================================================== -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.KiloCompanion"
+            android:configChanges="orientation|screenSize|smallestScreenSize">
+            
+            <!-- Main launcher intent - this makes the app appear in the launcher -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ===================================================================== -->
+        <!-- AUTH HANDLER ACTIVITY                                                 -->
+        <!-- ===================================================================== -->
+        <!-- This activity intercepts OAuth redirect URLs from authentication      -->
+        <!-- flows. It handles custom URI schemes (opencode://auth) and localhost  -->
+        <!-- callbacks that the CLI tools use for authentication.                  -->
+        <!-- ===================================================================== -->
+        <activity
+            android:name=".AuthHandlerActivity"
+            android:exported="true"
+            android:theme="@style/Theme.KiloCompanion.NoActionBar"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:excludeFromRecents="true">
+            
+            <!-- Intent filter for OpenCode custom URI scheme -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="opencode" android:host="auth" />
+            </intent-filter>
+            
+            <!-- Intent filter for Kilo custom URI scheme -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="kilo" android:host="auth" />
+            </intent-filter>
+            
+            <!-- Intent filter for localhost callbacks on various ports -->
+            <!-- CLI tools often listen on localhost:PORT for OAuth callbacks -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" android:host="127.0.0.1" />
+                <data android:scheme="http" android:host="localhost" />
+            </intent-filter>
+            
+            <!-- HTTPS localhost variants -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="127.0.0.1" />
+                <data android:scheme="https" android:host="localhost" />
+            </intent-filter>
+            
+            <!-- GitHub OAuth callback handler -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="com.kilo.companion" android:host="oauth" />
+            </intent-filter>
+        </activity>
+
+        <!-- ===================================================================== -->
+        <!-- FILE PROVIDER                                                         -->
+        <!-- ===================================================================== -->
+        <!-- FileProvider is used to safely share files with other apps via URIs.  -->
+        <!-- Required for Android 7.0+ when sharing files with external apps.    -->
+        <!-- ===================================================================== -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

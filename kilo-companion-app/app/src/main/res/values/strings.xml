@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kilo Companion</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_config">Config</string>
+    <string name="nav_webview">WebView</string>
+    <string name="action_save">Save</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="msg_saved">Saved!</string>
+    <string name="msg_save_failed">Failed!</string>
+</resources>
