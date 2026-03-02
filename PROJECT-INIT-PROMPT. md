@@ -1,0 +1,52 @@
+# Role and Objective
+You are an Expert Android Developer. Your task is to build a native Android "Companion Wrapper" application for OpenCode and Kilo CLI (which are Node.js/TypeScript based). 
+
+Since running complex Node TUIs natively inside an Android view is error-prone, this app will act as a **Configuration Dashboard, Authentication Handler, and Web Wrapper**. The actual Node CLI will run in the background (e.g., via Termux or a local node server), but this app will make managing it seamless for a mobile user.
+
+Additionally, you must set up an automated Git-tracking system to ensure all code we write is continuously committed.
+
+---
+
+## Phase 1: Automated Git Tracking & Rollback System
+Before writing the Android code, provide a script (`auto-git.sh` or `.bat`) that initializes a Git repository in our workspace and commits all changes automatically every 60 seconds. 
+1. Check if `.git` exists; if not, `git init`.
+2. Loop continuously, check for changes, and run `git add .` and `git commit -m "Auto-commit: [Timestamp]"`.
+
+---
+
+## Phase 2: Project Architecture & Shared Storage
+Because the Node CLI will likely run in a separate environment (like Termux) or a background process, we need a shared directory.
+1. Write the Android code to request explicit permissions to a shared public folder (e.g., `Documents/KiloWorkspace`).
+2. This folder will house the `.jsonc`, `auth.json`, and plugin directories so both the Android App and the CLI can access them.
+
+---
+
+## Phase 3: Configuration & MCP Server Management (JSON/JSONC)
+The app needs a native UI to manage configurations without forcing the user to use a terminal text editor.
+1. Build a Jetpack Compose screen named `ConfigManagerScreen`.
+2. It must read `$SHARED_DIR/.config/kilo/opencode.json` and `.jsonc`.
+3. Provide a user-friendly text editor or a set of forms to edit these files natively. 
+4. Include a "Save" button that writes the changes directly to the file system, handling any Try/Catch file permissions.
+
+---
+
+## Phase 4: Native Authentication Interception
+OAuth flows (like GitHub or OpenAI) break easily on mobile CLI tools because the CLI listens on `localhost` for a callback, which the mobile browser might not route correctly.
+1. Configure the `AndroidManifest.xml` with an `<intent-filter>` to catch custom URI schemes or specific OAuth redirect URLs (e.g., `opencode://auth` or `http://127.0.0.1:port`).
+2. Create an `AuthHandlerActivity` that intercepts this redirect link.
+3. Parse the authentication token from the URL parameters.
+4. Programmatically format it and write it to `$SHARED_DIR/auth.json`. 
+5. Show a UI Toast confirming "Authentication Successful - Token Saved."
+
+---
+
+## Phase 5: The Web/Local Interface Wrapper
+Kilo/OpenCode often support local web interfaces or API outputs. 
+1. Create a Jetpack Compose `WebView` component.
+2. Allow the user to input a local IP (e.g., `http://127.0.0.1:3000`) where the Kilo local server or Termux web-bridge is running.
+3. This allows the user to interact with the AI interface natively inside the app without dealing with terminal emulators.
+
+## Constraints for the AI:
+* **No Native Node Execution:** Do not attempt to embed `nodejs-mobile` or write a native PTY terminal emulator. Stick strictly to managing the configuration files, handling auth intents, and providing a WebView.
+* **Modularity:** Output code file by file with clear file paths commented at the top (e.g., `// app/src/main/java/com/kilo/mobile/MainActivity.kt`).
+* **Resilience:** Add extensive comments explaining *how* the Android code works, as the user has zero Android development experience.
