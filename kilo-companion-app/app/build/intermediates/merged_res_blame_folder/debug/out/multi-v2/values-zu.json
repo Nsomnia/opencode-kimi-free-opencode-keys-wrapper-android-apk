@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.kilo.companion.app-mergeDebugResources-49:/values-zu/values-zu.xml",
+            "outputFile": "com.kilo.companion.app-mergeDebugResources-50:/values-zu/values-zu.xml",
             "map": [
                 {
                     "source": "/home/nsomnia/.gradle/caches/transforms-4/6900246c4b56256b8458b3b783115330/transformed/jetified-ui-release/res/values-zu/values-zu.xml",

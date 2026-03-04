@@ -7,6 +7,7 @@ color purple_700
 color teal_200
 color teal_700
 color white
+drawable ic_launcher_foreground
 mipmap ic_launcher
 mipmap ic_launcher_round
 string action_refresh
@@ -17,6 +18,6 @@ string msg_saved
 string nav_config
 string nav_home
 string nav_webview
-style Theme.KiloCompanion
-style Theme.KiloCompanion.NoActionBar
+style Theme.CodePal
+style Theme.CodePal.NoActionBar
 xml file_paths

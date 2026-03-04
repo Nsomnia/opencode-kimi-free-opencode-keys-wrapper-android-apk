@@ -71,318 +71,350 @@
 54-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:50:5-75
 54-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:50:22-72
 55
-56    <permission
-56-->[androidx.core:core:1.12.0] /home/nsomnia/.gradle/caches/transforms-4/d15e3cf9deff4bed9af3ebc1542b46ca/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
-57        android:name="com.kilo.companion.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-57-->[androidx.core:core:1.12.0] /home/nsomnia/.gradle/caches/transforms-4/d15e3cf9deff4bed9af3ebc1542b46ca/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
-58        android:protectionLevel="signature" />
-58-->[androidx.core:core:1.12.0] /home/nsomnia/.gradle/caches/transforms-4/d15e3cf9deff4bed9af3ebc1542b46ca/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+56    <!-- Foreground service permission for Node.js runtime -->
+57    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+57-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:53:5-77
+57-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:53:22-74
+58    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+58-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:54:5-87
+58-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:54:22-84
 59
-60    <uses-permission android:name="com.kilo.companion.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- ========================================================================= -->
-60-->[androidx.core:core:1.12.0] /home/nsomnia/.gradle/caches/transforms-4/d15e3cf9deff4bed9af3ebc1542b46ca/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
-60-->[androidx.core:core:1.12.0] /home/nsomnia/.gradle/caches/transforms-4/d15e3cf9deff4bed9af3ebc1542b46ca/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
-61    <!-- APPLICATION DECLARATION -->
-62    <!-- ========================================================================= -->
-63    <application
-63-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:55:5-160:19
-64        android:name="com.kilo.companion.KiloCompanionApplication"
-64-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:56:9-49
-65        android:allowBackup="true"
-65-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:57:9-35
-66        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-66-->[androidx.core:core:1.12.0] /home/nsomnia/.gradle/caches/transforms-4/d15e3cf9deff4bed9af3ebc1542b46ca/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
-67        android:debuggable="true"
-68        android:extractNativeLibs="false"
-69        android:icon="@mipmap/ic_launcher"
-69-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:58:9-43
-70        android:label="@string/app_name"
-70-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:59:9-41
-71        android:requestLegacyExternalStorage="true"
-71-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:63:9-52
-72        android:roundIcon="@mipmap/ic_launcher_round"
-72-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:60:9-54
-73        android:supportsRtl="true"
-73-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:61:9-35
-74        android:theme="@style/Theme.KiloCompanion" >
-74-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:62:9-51
-75
-76        <!-- ===================================================================== -->
-77        <!-- MAIN ACTIVITY -->
-78        <!-- ===================================================================== -->
-79        <!-- This is the entry point of the app - what users see when they tap -->
-80        <!-- the app icon. It hosts all the Compose UI screens via navigation. -->
-81        <!-- ===================================================================== -->
-82        <activity
-82-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:72:9-83:20
-83            android:name="com.kilo.companion.MainActivity"
-83-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:73:13-41
-84            android:configChanges="orientation|screenSize|smallestScreenSize"
-84-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:76:13-78
-85            android:exported="true"
-85-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:74:13-36
-86            android:theme="@style/Theme.KiloCompanion" >
-86-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:75:13-55
-87
-88            <!-- Main launcher intent - this makes the app appear in the launcher -->
-89            <intent-filter>
-89-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:79:13-82:29
-90                <action android:name="android.intent.action.MAIN" />
-90-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:80:17-69
-90-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:80:25-66
-91
-92                <category android:name="android.intent.category.LAUNCHER" />
-92-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:81:17-77
-92-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:81:27-74
-93            </intent-filter>
-94        </activity>
+60    <!-- Post notifications (Android 13+) -->
+61    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+61-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:57:5-77
+61-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:57:22-74
+62
+63    <permission
+63-->[androidx.core:core:1.12.0] /home/nsomnia/.gradle/caches/transforms-4/d15e3cf9deff4bed9af3ebc1542b46ca/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+64        android:name="com.kilo.companion.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+64-->[androidx.core:core:1.12.0] /home/nsomnia/.gradle/caches/transforms-4/d15e3cf9deff4bed9af3ebc1542b46ca/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+65        android:protectionLevel="signature" />
+65-->[androidx.core:core:1.12.0] /home/nsomnia/.gradle/caches/transforms-4/d15e3cf9deff4bed9af3ebc1542b46ca/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+66
+67    <uses-permission android:name="com.kilo.companion.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- ========================================================================= -->
+67-->[androidx.core:core:1.12.0] /home/nsomnia/.gradle/caches/transforms-4/d15e3cf9deff4bed9af3ebc1542b46ca/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+67-->[androidx.core:core:1.12.0] /home/nsomnia/.gradle/caches/transforms-4/d15e3cf9deff4bed9af3ebc1542b46ca/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+68    <!-- APPLICATION DECLARATION -->
+69    <!-- ========================================================================= -->
+70    <application
+70-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:62:5-180:19
+71        android:name="com.kilo.companion.CodePalApplication"
+71-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:63:9-43
+72        android:allowBackup="true"
+72-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:64:9-35
+73        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+73-->[androidx.core:core:1.12.0] /home/nsomnia/.gradle/caches/transforms-4/d15e3cf9deff4bed9af3ebc1542b46ca/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+74        android:debuggable="true"
+75        android:extractNativeLibs="false"
+76        android:icon="@mipmap/ic_launcher"
+76-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:65:9-43
+77        android:label="@string/app_name"
+77-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:66:9-41
+78        android:requestLegacyExternalStorage="true"
+78-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:70:9-52
+79        android:roundIcon="@mipmap/ic_launcher_round"
+79-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:67:9-54
+80        android:supportsRtl="true"
+80-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:68:9-35
+81        android:theme="@style/Theme.CodePal"
+81-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:69:9-45
+82        android:usesCleartextTraffic="true" >
+82-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:71:9-44
+83
+84        <!-- ===================================================================== -->
+85        <!-- MAIN ACTIVITY -->
+86        <!-- ===================================================================== -->
+87        <!-- This is the entry point of the app - what users see when they tap -->
+88        <!-- the app icon. It hosts all the Compose UI screens via navigation. -->
+89        <!-- ===================================================================== -->
+90        <activity
+90-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:80:9-91:20
+91            android:name="com.kilo.companion.MainActivity"
+91-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:81:13-41
+92            android:configChanges="orientation|screenSize|smallestScreenSize"
+92-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:84:13-78
+93            android:exported="true"
+93-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:82:13-36
+94            android:theme="@style/Theme.CodePal" >
+94-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:83:13-49
 95
-96        <!-- ===================================================================== -->
-97        <!-- AUTH HANDLER ACTIVITY -->
-98        <!-- ===================================================================== -->
-99        <!-- This activity intercepts OAuth redirect URLs from authentication -->
-100        <!-- flows. It handles custom URI schemes (opencode://auth) and localhost -->
-101        <!-- callbacks that the CLI tools use for authentication. -->
-102        <!-- ===================================================================== -->
-103        <activity
-103-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:92:9-142:20
-104            android:name="com.kilo.companion.AuthHandlerActivity"
-104-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:93:13-48
-105            android:excludeFromRecents="true"
-105-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:98:13-46
-106            android:exported="true"
-106-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:94:13-36
-107            android:launchMode="singleTask"
-107-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:96:13-44
-108            android:noHistory="true"
-108-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:97:13-37
-109            android:theme="@style/Theme.KiloCompanion.NoActionBar" >
-109-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:95:13-67
-110
-111            <!-- Intent filter for OpenCode custom URI scheme -->
-112            <intent-filter>
-112-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:101:13-106:29
-113                <action android:name="android.intent.action.VIEW" />
-113-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:102:17-69
-113-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:102:25-66
-114
-115                <category android:name="android.intent.category.DEFAULT" />
-115-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:103:17-76
-115-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:103:27-73
-116                <category android:name="android.intent.category.BROWSABLE" />
-116-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:104:17-78
-116-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:104:27-75
-117
-118                <data
-118-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:17-71
-119                    android:host="auth"
-119-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:49-68
-120                    android:scheme="opencode" />
-120-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:23-48
-121            </intent-filter>
+96            <!-- Main launcher intent - this makes the app appear in the launcher -->
+97            <intent-filter>
+97-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:87:13-90:29
+98                <action android:name="android.intent.action.MAIN" />
+98-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:88:17-69
+98-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:88:25-66
+99
+100                <category android:name="android.intent.category.LAUNCHER" />
+100-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:89:17-77
+100-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:89:27-74
+101            </intent-filter>
+102        </activity>
+103
+104        <!-- ===================================================================== -->
+105        <!-- AUTH HANDLER ACTIVITY -->
+106        <!-- ===================================================================== -->
+107        <!-- This activity intercepts OAuth redirect URLs from authentication -->
+108        <!-- flows. It handles custom URI schemes (opencode://auth) and localhost -->
+109        <!-- callbacks that the CLI tools use for authentication. -->
+110        <!-- ===================================================================== -->
+111        <activity
+111-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:100:9-150:20
+112            android:name="com.kilo.companion.AuthHandlerActivity"
+112-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:101:13-48
+113            android:excludeFromRecents="true"
+113-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:106:13-46
+114            android:exported="true"
+114-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:102:13-36
+115            android:launchMode="singleTask"
+115-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:104:13-44
+116            android:noHistory="true"
+116-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:13-37
+117            android:theme="@style/Theme.CodePal.NoActionBar" >
+117-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:103:13-61
+118
+119            <!-- Intent filter for OpenCode custom URI scheme -->
+120            <intent-filter>
+120-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:109:13-114:29
+121                <action android:name="android.intent.action.VIEW" />
+121-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:17-69
+121-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:25-66
 122
-123            <!-- Intent filter for Kilo custom URI scheme -->
-124            <intent-filter>
-124-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:109:13-114:29
-125                <action android:name="android.intent.action.VIEW" />
-125-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:102:17-69
-125-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:102:25-66
-126
-127                <category android:name="android.intent.category.DEFAULT" />
-127-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:103:17-76
-127-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:103:27-73
-128                <category android:name="android.intent.category.BROWSABLE" />
-128-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:104:17-78
-128-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:104:27-75
-129
-130                <data
-130-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:17-71
-131                    android:host="auth"
-131-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:49-68
-132                    android:scheme="kilo" />
-132-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:23-48
-133            </intent-filter>
+123                <category android:name="android.intent.category.DEFAULT" />
+123-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:17-76
+123-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:27-73
+124                <category android:name="android.intent.category.BROWSABLE" />
+124-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-78
+124-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:27-75
+125
+126                <data
+126-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:17-71
+127                    android:host="auth"
+127-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:49-68
+128                    android:scheme="opencode" />
+128-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:23-48
+129            </intent-filter>
+130
+131            <!-- Intent filter for Kilo custom URI scheme -->
+132            <intent-filter>
+132-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:117:13-122:29
+133                <action android:name="android.intent.action.VIEW" />
+133-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:17-69
+133-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:25-66
 134
-135            <!-- Intent filter for localhost callbacks on various ports -->
-136            <!-- CLI tools often listen on localhost:PORT for OAuth callbacks -->
-137            <intent-filter>
-137-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:118:13-124:29
-138                <action android:name="android.intent.action.VIEW" />
-138-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:102:17-69
-138-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:102:25-66
-139
-140                <category android:name="android.intent.category.DEFAULT" />
-140-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:103:17-76
-140-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:103:27-73
-141                <category android:name="android.intent.category.BROWSABLE" />
-141-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:104:17-78
-141-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:104:27-75
+135                <category android:name="android.intent.category.DEFAULT" />
+135-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:17-76
+135-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:27-73
+136                <category android:name="android.intent.category.BROWSABLE" />
+136-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-78
+136-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:27-75
+137
+138                <data
+138-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:17-71
+139                    android:host="auth"
+139-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:49-68
+140                    android:scheme="kilo" />
+140-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:23-48
+141            </intent-filter>
 142
-143                <data
-143-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:17-71
-144                    android:host="127.0.0.1"
-144-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:49-68
-145                    android:scheme="http" />
-145-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:23-48
-146                <data
-146-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:17-71
-147                    android:host="localhost"
-147-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:49-68
-148                    android:scheme="http" />
-148-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:23-48
-149            </intent-filter>
+143            <!-- Intent filter for localhost callbacks on various ports -->
+144            <!-- CLI tools often listen on localhost:PORT for OAuth callbacks -->
+145            <intent-filter>
+145-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:126:13-132:29
+146                <action android:name="android.intent.action.VIEW" />
+146-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:17-69
+146-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:25-66
+147
+148                <category android:name="android.intent.category.DEFAULT" />
+148-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:17-76
+148-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:27-73
+149                <category android:name="android.intent.category.BROWSABLE" />
+149-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-78
+149-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:27-75
 150
-151            <!-- HTTPS localhost variants -->
-152            <intent-filter>
-152-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:127:13-133:29
-153                <action android:name="android.intent.action.VIEW" />
-153-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:102:17-69
-153-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:102:25-66
-154
-155                <category android:name="android.intent.category.DEFAULT" />
-155-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:103:17-76
-155-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:103:27-73
-156                <category android:name="android.intent.category.BROWSABLE" />
-156-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:104:17-78
-156-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:104:27-75
-157
-158                <data
-158-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:17-71
-159                    android:host="127.0.0.1"
-159-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:49-68
-160                    android:scheme="https" />
-160-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:23-48
-161                <data
-161-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:17-71
-162                    android:host="localhost"
-162-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:49-68
-163                    android:scheme="https" />
-163-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:23-48
-164            </intent-filter>
+151                <data
+151-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:17-71
+152                    android:host="127.0.0.1"
+152-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:49-68
+153                    android:scheme="http" />
+153-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:23-48
+154                <data
+154-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:17-71
+155                    android:host="localhost"
+155-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:49-68
+156                    android:scheme="http" />
+156-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:23-48
+157            </intent-filter>
+158
+159            <!-- HTTPS localhost variants -->
+160            <intent-filter>
+160-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:135:13-141:29
+161                <action android:name="android.intent.action.VIEW" />
+161-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:17-69
+161-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:25-66
+162
+163                <category android:name="android.intent.category.DEFAULT" />
+163-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:17-76
+163-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:27-73
+164                <category android:name="android.intent.category.BROWSABLE" />
+164-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-78
+164-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:27-75
 165
-166            <!-- GitHub OAuth callback handler -->
-167            <intent-filter>
-167-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:136:13-141:29
-168                <action android:name="android.intent.action.VIEW" />
-168-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:102:17-69
-168-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:102:25-66
-169
-170                <category android:name="android.intent.category.DEFAULT" />
-170-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:103:17-76
-170-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:103:27-73
-171                <category android:name="android.intent.category.BROWSABLE" />
-171-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:104:17-78
-171-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:104:27-75
-172
-173                <data
-173-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:17-71
-174                    android:host="oauth"
-174-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:49-68
-175                    android:scheme="com.kilo.companion" />
-175-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:23-48
-176            </intent-filter>
-177        </activity>
-178
-179        <!-- ===================================================================== -->
-180        <!-- FILE PROVIDER -->
-181        <!-- ===================================================================== -->
-182        <!-- FileProvider is used to safely share files with other apps via URIs. -->
-183        <!-- Required for Android 7.0+ when sharing files with external apps. -->
-184        <!-- ===================================================================== -->
-185        <provider
-186            android:name="androidx.core.content.FileProvider"
-186-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:151:13-62
-187            android:authorities="com.kilo.companion.fileprovider"
-187-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:152:13-64
-188            android:exported="false"
-188-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:153:13-37
-189            android:grantUriPermissions="true" >
-189-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:154:13-47
-190            <meta-data
-190-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:155:13-157:54
-191                android:name="android.support.FILE_PROVIDER_PATHS"
-191-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:156:17-67
-192                android:resource="@xml/file_paths" />
-192-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:157:17-51
-193        </provider>
-194
-195        <activity
-195-->[androidx.compose.ui:ui-test-manifest:1.6.1] /home/nsomnia/.gradle/caches/transforms-4/7684c1b9dabf021d0f3764901ba60560/transformed/jetified-ui-test-manifest-1.6.1/AndroidManifest.xml:23:9-25:39
-196            android:name="androidx.activity.ComponentActivity"
-196-->[androidx.compose.ui:ui-test-manifest:1.6.1] /home/nsomnia/.gradle/caches/transforms-4/7684c1b9dabf021d0f3764901ba60560/transformed/jetified-ui-test-manifest-1.6.1/AndroidManifest.xml:24:13-63
-197            android:exported="true" />
-197-->[androidx.compose.ui:ui-test-manifest:1.6.1] /home/nsomnia/.gradle/caches/transforms-4/7684c1b9dabf021d0f3764901ba60560/transformed/jetified-ui-test-manifest-1.6.1/AndroidManifest.xml:25:13-36
-198        <activity
-198-->[androidx.compose.ui:ui-tooling-android:1.6.1] /home/nsomnia/.gradle/caches/transforms-4/891cdb6ea7f2be30fe59ae36c15a59e0/transformed/jetified-ui-tooling-release/AndroidManifest.xml:23:9-25:39
-199            android:name="androidx.compose.ui.tooling.PreviewActivity"
-199-->[androidx.compose.ui:ui-tooling-android:1.6.1] /home/nsomnia/.gradle/caches/transforms-4/891cdb6ea7f2be30fe59ae36c15a59e0/transformed/jetified-ui-tooling-release/AndroidManifest.xml:24:13-71
-200            android:exported="true" />
-200-->[androidx.compose.ui:ui-tooling-android:1.6.1] /home/nsomnia/.gradle/caches/transforms-4/891cdb6ea7f2be30fe59ae36c15a59e0/transformed/jetified-ui-tooling-release/AndroidManifest.xml:25:13-36
-201
-202        <provider
-202-->[androidx.emoji2:emoji2:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/d3b1da56ef2cd7f2f0424a4a3a90a59e/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
-203            android:name="androidx.startup.InitializationProvider"
-203-->[androidx.emoji2:emoji2:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/d3b1da56ef2cd7f2f0424a4a3a90a59e/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:25:13-67
-204            android:authorities="com.kilo.companion.androidx-startup"
-204-->[androidx.emoji2:emoji2:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/d3b1da56ef2cd7f2f0424a4a3a90a59e/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:26:13-68
-205            android:exported="false" >
-205-->[androidx.emoji2:emoji2:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/d3b1da56ef2cd7f2f0424a4a3a90a59e/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:27:13-37
-206            <meta-data
-206-->[androidx.emoji2:emoji2:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/d3b1da56ef2cd7f2f0424a4a3a90a59e/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-207                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-207-->[androidx.emoji2:emoji2:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/d3b1da56ef2cd7f2f0424a4a3a90a59e/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
-208                android:value="androidx.startup" />
-208-->[androidx.emoji2:emoji2:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/d3b1da56ef2cd7f2f0424a4a3a90a59e/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
-209            <meta-data
-209-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/nsomnia/.gradle/caches/transforms-4/9530b5bcd89ae2092a885d79c9cc549b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
-210                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-210-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/nsomnia/.gradle/caches/transforms-4/9530b5bcd89ae2092a885d79c9cc549b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
-211                android:value="androidx.startup" />
-211-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/nsomnia/.gradle/caches/transforms-4/9530b5bcd89ae2092a885d79c9cc549b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
-212            <meta-data
-212-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-213                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-213-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-214                android:value="androidx.startup" />
-214-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-215        </provider>
-216
-217        <receiver
-217-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-218            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-218-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-219            android:directBootAware="false"
-219-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-220            android:enabled="true"
-220-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-221            android:exported="true"
-221-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-222            android:permission="android.permission.DUMP" >
-222-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-223            <intent-filter>
-223-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-224                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-224-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-224-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-225            </intent-filter>
-226            <intent-filter>
-226-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-227                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-227-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-227-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-228            </intent-filter>
-229            <intent-filter>
-229-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-230                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-230-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-230-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-231            </intent-filter>
-232            <intent-filter>
-232-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-233                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-233-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-233-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-234            </intent-filter>
-235        </receiver>
-236    </application>
-237
-238</manifest>
+166                <data
+166-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:17-71
+167                    android:host="127.0.0.1"
+167-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:49-68
+168                    android:scheme="https" />
+168-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:23-48
+169                <data
+169-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:17-71
+170                    android:host="localhost"
+170-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:49-68
+171                    android:scheme="https" />
+171-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:23-48
+172            </intent-filter>
+173
+174            <!-- GitHub OAuth callback handler -->
+175            <intent-filter>
+175-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:144:13-149:29
+176                <action android:name="android.intent.action.VIEW" />
+176-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:17-69
+176-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:25-66
+177
+178                <category android:name="android.intent.category.DEFAULT" />
+178-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:17-76
+178-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:27-73
+179                <category android:name="android.intent.category.BROWSABLE" />
+179-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-78
+179-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:27-75
+180
+181                <data
+181-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:17-71
+182                    android:host="oauth"
+182-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:49-68
+183                    android:scheme="com.kilo.companion" />
+183-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:23-48
+184            </intent-filter>
+185        </activity>
+186
+187        <!-- ===================================================================== -->
+188        <!-- FILE PROVIDER -->
+189        <!-- ===================================================================== -->
+190        <!-- FileProvider is used to safely share files with other apps via URIs. -->
+191        <!-- Required for Android 7.0+ when sharing files with external apps. -->
+192        <!-- ===================================================================== -->
+193        <provider
+194            android:name="androidx.core.content.FileProvider"
+194-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:159:13-62
+195            android:authorities="com.kilo.companion.fileprovider"
+195-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:160:13-64
+196            android:exported="false"
+196-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:161:13-37
+197            android:grantUriPermissions="true" >
+197-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:162:13-47
+198            <meta-data
+198-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:163:13-165:54
+199                android:name="android.support.FILE_PROVIDER_PATHS"
+199-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:164:17-67
+200                android:resource="@xml/file_paths" />
+200-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:165:17-51
+201        </provider>
+202
+203        <!-- ===================================================================== -->
+204        <!-- NODE.JS SERVICE -->
+205        <!-- ===================================================================== -->
+206        <!-- Foreground service that manages the Node.js runtime for running -->
+207        <!-- opencode and kilo CLI tools. Keeps the AI environment running. -->
+208        <!-- ===================================================================== -->
+209        <service
+209-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:174:9-178:56
+210            android:name="com.kilo.companion.nodejs.NodeService"
+210-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:175:13-47
+211            android:enabled="true"
+211-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:176:13-35
+212            android:exported="false"
+212-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:177:13-37
+213            android:foregroundServiceType="dataSync" />
+213-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:178:13-53
+214
+215        <activity
+215-->[androidx.compose.ui:ui-test-manifest:1.6.1] /home/nsomnia/.gradle/caches/transforms-4/7684c1b9dabf021d0f3764901ba60560/transformed/jetified-ui-test-manifest-1.6.1/AndroidManifest.xml:23:9-25:39
+216            android:name="androidx.activity.ComponentActivity"
+216-->[androidx.compose.ui:ui-test-manifest:1.6.1] /home/nsomnia/.gradle/caches/transforms-4/7684c1b9dabf021d0f3764901ba60560/transformed/jetified-ui-test-manifest-1.6.1/AndroidManifest.xml:24:13-63
+217            android:exported="true" />
+217-->[androidx.compose.ui:ui-test-manifest:1.6.1] /home/nsomnia/.gradle/caches/transforms-4/7684c1b9dabf021d0f3764901ba60560/transformed/jetified-ui-test-manifest-1.6.1/AndroidManifest.xml:25:13-36
+218        <activity
+218-->[androidx.compose.ui:ui-tooling-android:1.6.1] /home/nsomnia/.gradle/caches/transforms-4/891cdb6ea7f2be30fe59ae36c15a59e0/transformed/jetified-ui-tooling-release/AndroidManifest.xml:23:9-25:39
+219            android:name="androidx.compose.ui.tooling.PreviewActivity"
+219-->[androidx.compose.ui:ui-tooling-android:1.6.1] /home/nsomnia/.gradle/caches/transforms-4/891cdb6ea7f2be30fe59ae36c15a59e0/transformed/jetified-ui-tooling-release/AndroidManifest.xml:24:13-71
+220            android:exported="true" />
+220-->[androidx.compose.ui:ui-tooling-android:1.6.1] /home/nsomnia/.gradle/caches/transforms-4/891cdb6ea7f2be30fe59ae36c15a59e0/transformed/jetified-ui-tooling-release/AndroidManifest.xml:25:13-36
+221
+222        <provider
+222-->[androidx.emoji2:emoji2:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/d3b1da56ef2cd7f2f0424a4a3a90a59e/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+223            android:name="androidx.startup.InitializationProvider"
+223-->[androidx.emoji2:emoji2:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/d3b1da56ef2cd7f2f0424a4a3a90a59e/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:25:13-67
+224            android:authorities="com.kilo.companion.androidx-startup"
+224-->[androidx.emoji2:emoji2:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/d3b1da56ef2cd7f2f0424a4a3a90a59e/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:26:13-68
+225            android:exported="false" >
+225-->[androidx.emoji2:emoji2:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/d3b1da56ef2cd7f2f0424a4a3a90a59e/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:27:13-37
+226            <meta-data
+226-->[androidx.emoji2:emoji2:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/d3b1da56ef2cd7f2f0424a4a3a90a59e/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+227                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+227-->[androidx.emoji2:emoji2:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/d3b1da56ef2cd7f2f0424a4a3a90a59e/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
+228                android:value="androidx.startup" />
+228-->[androidx.emoji2:emoji2:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/d3b1da56ef2cd7f2f0424a4a3a90a59e/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
+229            <meta-data
+229-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/nsomnia/.gradle/caches/transforms-4/9530b5bcd89ae2092a885d79c9cc549b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+230                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+230-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/nsomnia/.gradle/caches/transforms-4/9530b5bcd89ae2092a885d79c9cc549b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+231                android:value="androidx.startup" />
+231-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/nsomnia/.gradle/caches/transforms-4/9530b5bcd89ae2092a885d79c9cc549b/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+232            <meta-data
+232-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+233                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+233-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+234                android:value="androidx.startup" />
+234-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+235        </provider>
+236
+237        <receiver
+237-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+238            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+238-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+239            android:directBootAware="false"
+239-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+240            android:enabled="true"
+240-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+241            android:exported="true"
+241-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+242            android:permission="android.permission.DUMP" >
+242-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+243            <intent-filter>
+243-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+244                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+244-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+244-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+245            </intent-filter>
+246            <intent-filter>
+246-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+247                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+247-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+247-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+248            </intent-filter>
+249            <intent-filter>
+249-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+250                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+250-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+250-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+251            </intent-filter>
+252            <intent-filter>
+252-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+253                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+253-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+253-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nsomnia/.gradle/caches/transforms-4/bc28b11554e7315312615442580605e2/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+254            </intent-filter>
+255        </receiver>
+256    </application>
+257
+258</manifest>

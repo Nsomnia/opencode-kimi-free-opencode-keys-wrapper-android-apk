@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.kilo.companion.app-mergeDebugResources-49:/values-pt-rPT/values-pt-rPT.xml",
+            "outputFile": "com.kilo.companion.app-mergeDebugResources-50:/values-pt-rPT/values-pt-rPT.xml",
             "map": [
                 {
                     "source": "/home/nsomnia/.gradle/caches/transforms-4/82a560bd982912fbb667b119a9a9a2c4/transformed/jetified-foundation-release/res/values-pt-rPT/values-pt-rPT.xml",

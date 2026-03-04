@@ -53,6 +53,13 @@
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
 
+    <!-- Foreground service permission for Node.js runtime -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+
+    <!-- Post notifications (Android 13+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <permission
         android:name="com.kilo.companion.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -61,7 +68,7 @@
     <!-- APPLICATION DECLARATION -->
     <!-- ========================================================================= -->
     <application
-        android:name="com.kilo.companion.KiloCompanionApplication"
+        android:name="com.kilo.companion.CodePalApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -71,7 +78,8 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.KiloCompanion" >
+        android:theme="@style/Theme.CodePal"
+        android:usesCleartextTraffic="true" >
 
         <!-- ===================================================================== -->
         <!-- MAIN ACTIVITY -->
@@ -83,7 +91,7 @@
             android:name="com.kilo.companion.MainActivity"
             android:configChanges="orientation|screenSize|smallestScreenSize"
             android:exported="true"
-            android:theme="@style/Theme.KiloCompanion" >
+            android:theme="@style/Theme.CodePal" >
 
             <!-- Main launcher intent - this makes the app appear in the launcher -->
             <intent-filter>
@@ -106,7 +114,7 @@
             android:exported="true"
             android:launchMode="singleTask"
             android:noHistory="true"
-            android:theme="@style/Theme.KiloCompanion.NoActionBar" >
+            android:theme="@style/Theme.CodePal.NoActionBar" >
 
             <!-- Intent filter for OpenCode custom URI scheme -->
             <intent-filter>
@@ -191,6 +199,18 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <!-- ===================================================================== -->
+        <!-- NODE.JS SERVICE -->
+        <!-- ===================================================================== -->
+        <!-- Foreground service that manages the Node.js runtime for running -->
+        <!-- opencode and kilo CLI tools. Keeps the AI environment running. -->
+        <!-- ===================================================================== -->
+        <service
+            android:name="com.kilo.companion.nodejs.NodeService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
 
         <activity
             android:name="androidx.activity.ComponentActivity"
