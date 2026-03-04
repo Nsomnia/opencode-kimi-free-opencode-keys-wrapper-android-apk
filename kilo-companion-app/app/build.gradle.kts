@@ -44,17 +44,17 @@ android {
             useSupportLibrary = true
         }
         
-        // NDK configuration for Node.js integration (disabled until nodejs-mobile is ready)
-        // externalNativeBuild {
-        //     cmake {
-        //         cppFlags += "-std=c++17"
-        //         arguments += "-DANDROID_STL=c++_shared"
-        //     }
-        // }
-        //
-        // ndk {
-        //     abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86_64", "x86")
-        // }
+        // NDK configuration for Node.js integration
+        externalNativeBuild {
+            cmake {
+                cppFlags += "-std=c++17"
+                arguments += "-DANDROID_STL=c++_shared"
+            }
+        }
+
+        ndk {
+            abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86_64", "x86")
+        }
     }
     
     // -----------------------------------------------------------------------------
@@ -78,14 +78,14 @@ android {
     }
     
     // -----------------------------------------------------------------------------
-    // Native Build Configuration (disabled until nodejs-mobile is ready)
+    // Native Build Configuration
     // -----------------------------------------------------------------------------
-    // externalNativeBuild {
-    //     cmake {
-    //         path = file("src/main/cpp/CMakeLists.txt")
-    //         version = "3.22.1"
-    //     }
-    // }
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
+            version = "3.22.1"
+        }
+    }
     
     // -----------------------------------------------------------------------------
     // Compilation Options
@@ -118,10 +118,9 @@ android {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
-        // jniLibs pickFirsts disabled until nodejs-mobile is integrated
-        // jniLibs {
-        //     pickFirsts += listOf("**/libnodejs-mobile.so")
-        // }
+        jniLibs {
+            pickFirsts += listOf("**/libnodejs-mobile.so")
+        }
     }
 }
 

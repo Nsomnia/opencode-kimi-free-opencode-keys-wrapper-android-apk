@@ -19,9 +19,6 @@
 #define LOGI(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
 #define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
 
-// Node.js entry point (provided by nodejs-mobile)
-extern "C" int node_main(int argc, char** argv);
-
 // Thread for running Node.js
 static pthread_t node_thread;
 static volatile int node_running = 0;
@@ -34,6 +31,10 @@ struct NodeArgs {
     int argc;
     char** argv;
 };
+
+#if NODEJS_MOBILE_AVAILABLE
+// Node.js entry point (provided by nodejs-mobile)
+extern "C" int node_main(int argc, char** argv);
 
 // Thread function for Node.js
 void* node_thread_func(void* arg) {
@@ -57,7 +58,7 @@ void* node_thread_func(void* arg) {
     
     // Notify Java that Node.js stopped
     JNIEnv* env;
-    if (jvm->AttachCurrentThread(&env, nullptr) == JNI_OK) {
+    if (jvm && jvm->AttachCurrentThread(&env, nullptr) == JNI_OK) {
         if (callback_obj && callback_method) {
             env->CallVoidMethod(callback_obj, callback_method, env->NewStringUTF("stopped"));
         }
@@ -66,6 +67,31 @@ void* node_thread_func(void* arg) {
     
     return nullptr;
 }
+#else
+// Stub thread function when nodejs-mobile is not available
+void* node_thread_func(void* arg) {
+    LOGE("Node.js Mobile not available - cannot start runtime");
+    
+    // Cleanup
+    NodeArgs* args = (NodeArgs*)arg;
+    for (int i = 0; i < args->argc; i++) {
+        free(args->argv[i]);
+    }
+    free(args->argv);
+    free(args);
+    
+    // Notify Java that "Node.js" stopped (with error)
+    JNIEnv* env;
+    if (jvm && jvm->AttachCurrentThread(&env, nullptr) == JNI_OK) {
+        if (callback_obj && callback_method) {
+            env->CallVoidMethod(callback_obj, callback_method, env->NewStringUTF("error: nodejs-mobile not available"));
+        }
+        jvm->DetachCurrentThread();
+    }
+    
+    return nullptr;
+}
+#endif
 
 // Send message to Java
 void send_to_java(const char* message) {
@@ -90,6 +116,12 @@ Java_com_kilo_companion_nodejs_NodeRuntime_nativeInit(
     jobject callback
 ) {
     LOGI("Initializing native Node.js interface");
+    
+#if NODEJS_MOBILE_AVAILABLE
+    LOGI("Node.js Mobile is available");
+#else
+    LOGW("Node.js Mobile is NOT available - runtime disabled");
+#endif
     
     // Cache JVM
     env->GetJavaVM(&jvm);
@@ -117,6 +149,11 @@ Java_com_kilo_companion_nodejs_NodeRuntime_nativeStartNode(
         LOGE("Node.js is already running");
         return JNI_FALSE;
     }
+    
+#if !NODEJS_MOBILE_AVAILABLE
+    LOGE("Cannot start Node.js - nodejs-mobile not available");
+    return JNI_FALSE;
+#endif
     
     const char* project = env->GetStringUTFChars(projectPath, nullptr);
     const char* script = env->GetStringUTFChars(scriptPath, nullptr);

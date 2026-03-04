@@ -40,6 +40,7 @@ fun RuntimeScreen() {
     var activeTool by remember { mutableStateOf<String?>(null) }
     var messages by remember { mutableStateOf<List<String>>(emptyList()) }
     var showClearDialog by remember { mutableStateOf(false) }
+    val isNativeAvailable = remember { runtime.isNativeAvailable }
     
     // Monitor runtime state
     LaunchedEffect(Unit) {
@@ -105,10 +106,11 @@ fun RuntimeScreen() {
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 colors = CardDefaults.cardColors(
-                    containerColor = if (isRunning) 
-                        MaterialTheme.colorScheme.primaryContainer 
-                    else 
-                        MaterialTheme.colorScheme.surfaceVariant
+                    containerColor = when {
+                        !isNativeAvailable -> MaterialTheme.colorScheme.errorContainer
+                        isRunning -> MaterialTheme.colorScheme.primaryContainer
+                        else -> MaterialTheme.colorScheme.surfaceVariant
+                    }
                 )
             ) {
                 Column(
@@ -120,23 +122,29 @@ fun RuntimeScreen() {
                         Icon(
                             imageVector = if (isRunning) Icons.Default.Computer else Icons.Default.Terminal,
                             contentDescription = null,
-                            tint = if (isRunning) 
-                                MaterialTheme.colorScheme.primary 
-                            else 
-                                MaterialTheme.colorScheme.onSurfaceVariant,
+                            tint = when {
+                                !isNativeAvailable -> MaterialTheme.colorScheme.error
+                                isRunning -> MaterialTheme.colorScheme.primary
+                                else -> MaterialTheme.colorScheme.onSurfaceVariant
+                            },
                             modifier = Modifier.size(32.dp)
                         )
                         Spacer(modifier = Modifier.width(12.dp))
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                text = if (isRunning) "Node.js Active" else "Node.js Stopped",
+                                text = when {
+                                    !isNativeAvailable -> "Node.js Unavailable"
+                                    isRunning -> "Node.js Active"
+                                    else -> "Node.js Stopped"
+                                },
                                 style = MaterialTheme.typography.titleMedium
                             )
                             Text(
-                                text = if (isRunning) 
-                                    "$activeTool environment is running" 
-                                else 
-                                    "Start a tool to begin coding",
+                                text = when {
+                                    !isNativeAvailable -> "Native library not loaded - build with CMake"
+                                    isRunning -> "$activeTool environment is running"
+                                    else -> "Start a tool to begin coding"
+                                },
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
@@ -165,14 +173,14 @@ fun RuntimeScreen() {
                             context.startService(intent)
                         }
                     },
-                    enabled = !isRunning,
+                    enabled = isNativeAvailable && !isRunning,
                     modifier = Modifier.weight(1f)
                 ) {
                     Icon(Icons.Default.PlayArrow, null)
                     Spacer(modifier = Modifier.width(4.dp))
                     Text("OpenCode")
                 }
-                
+
                 // Start Kilo
                 Button(
                     onClick = {
@@ -186,14 +194,14 @@ fun RuntimeScreen() {
                             context.startService(intent)
                         }
                     },
-                    enabled = !isRunning,
+                    enabled = isNativeAvailable && !isRunning,
                     modifier = Modifier.weight(1f)
                 ) {
                     Icon(Icons.Default.PlayArrow, null)
                     Spacer(modifier = Modifier.width(4.dp))
                     Text("Kilo")
                 }
-                
+
                 // Stop
                 OutlinedButton(
                     onClick = {
@@ -205,7 +213,7 @@ fun RuntimeScreen() {
                             activeTool = null
                         }
                     },
-                    enabled = isRunning,
+                    enabled = isNativeAvailable && isRunning,
                     modifier = Modifier.weight(1f)
                 ) {
                     Icon(Icons.Default.Stop, null)

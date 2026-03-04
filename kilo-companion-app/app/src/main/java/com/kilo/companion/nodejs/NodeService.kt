@@ -110,16 +110,24 @@ class NodeService : Service() {
     
     private fun startNode(projectPath: String, tool: String) {
         Log.i(TAG, "Starting Node.js with $tool in $projectPath")
-        
+
+        // Check if native library is available
+        if (!runtime.isNativeAvailable) {
+            Log.e(TAG, "Cannot start $tool - native library not available")
+            startForeground(NOTIFICATION_ID, createNotification("Error: Node.js runtime not available"))
+            stopSelf()
+            return
+        }
+
         startForeground(NOTIFICATION_ID, createNotification("Starting $tool..."))
-        
+
         serviceJob = CoroutineScope(Dispatchers.IO).launch {
             val success = when (tool) {
                 "opencode" -> runtime.startOpencode(projectPath)
                 "kilo" -> runtime.startKilo(projectPath)
                 else -> runtime.startOpencode(projectPath)
             }
-            
+
             if (success) {
                 updateNotification("$tool is running")
                 monitorNodeProcess()

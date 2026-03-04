@@ -35,7 +35,7 @@ class SharedStorageManager(private val context: Context) {
         // Default configs based on actual OpenCode schema
         // Note: Using single $ to avoid Kotlin string interpolation issues
         val DEFAULT_CONFIG_OPENCODE = """{
-  "\$schema": "https://opencode.ai/config.json",
+  "${'$'}schema": "https://opencode.ai/config.json",
   "model": {
     "provider": "openai",
     "name": "gpt-4o"
@@ -46,7 +46,7 @@ class SharedStorageManager(private val context: Context) {
 }"""
         
         val DEFAULT_CONFIG_KILO = """{
-  "\$schema": "https://kilo.ai/config.json",
+  "${'$'}schema": "https://kilo.ai/config.json",
   "model": {
     "provider": "openai",
     "name": "gpt-4o"
@@ -172,5 +172,13 @@ class SharedStorageManager(private val context: Context) {
      */
     fun getHomeDirectoryPath(): String? {
         return getHomeDirectory()?.absolutePath
+    }
+    
+    /**
+     * Get the workspace path (alias for getHomeDirectoryPath)
+     * @return Path to workspace or null if not available
+     */
+    fun getWorkspacePath(): String? {
+        return getHomeDirectoryPath()
     }
 }
