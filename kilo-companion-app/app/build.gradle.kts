@@ -20,6 +20,9 @@ plugins {
 }
 
 android {
+    // Namespace is required for Android Gradle Plugin 8.0+
+    namespace = "com.kilo.companion"
+    
     // -----------------------------------------------------------------------------
     // SDK Configuration
     // -----------------------------------------------------------------------------

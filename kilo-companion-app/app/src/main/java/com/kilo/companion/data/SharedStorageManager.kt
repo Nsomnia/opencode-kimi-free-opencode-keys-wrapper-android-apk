@@ -20,40 +20,57 @@ class SharedStorageManager(private val context: Context) {
     
     companion object {
         private const val TAG = "SharedStorageManager"
-        const val WORKSPACE_DIR_NAME = "KiloWorkspace"
-        const val CONFIG_PATH = ".config/kilo"
+        
+        // Config paths in user's home directory
+        const val HOME_OPENCODE_DIR = ".opencode"
+        const val HOME_LOCAL_SHARE_OPENCODE = ".local/share/opencode"
+        const val HOME_LOCAL_SHARE_KILO = ".local/share/kilo"
+        const val HOME_CONFIG_OPENCODE = ".config/opencode"
+        const val HOME_CONFIG_KILO = ".config/kilo"
+        
         const val FILE_OPENCODE_JSON = "opencode.json"
         const val FILE_OPENCODE_JSONC = "opencode.jsonc"
         const val FILE_AUTH_JSON = "auth.json"
+        
+        // Default configs based on actual OpenCode schema
+        const val DEFAULT_CONFIG_OPENCODE = """{
+  "\$schema": "https://opencode.ai/config.json",
+  "model": {
+    "provider": "openai",
+    "name": "gpt-4o"
+  },
+  "preferences": {
+    "theme": "system"
+  }
+}"""
+        
+        const val DEFAULT_CONFIG_KILO = """{
+  "\$schema": "https://kilo.ai/config.json",
+  "model": {
+    "provider": "openai", 
+    "name": "gpt-4o"
+  },
+  "preferences": {
+    "theme": "system"
+  }
+}"""
     }
     
-    private fun getWorkspaceDirectory(): File? {
-        if (Environment.getExternalStorageState() != Environment.MEDIA_MOUNTED) {
-            Log.e(TAG, "External storage not mounted")
-            return null
-        }
-        
-        val documentsDir = Environment.getExternalStoragePublicDirectory(
-            Environment.DIRECTORY_DOCUMENTS
-        )
-        val workspaceDir = File(documentsDir, WORKSPACE_DIR_NAME)
-        
-        if (!workspaceDir.exists()) {
-            val created = workspaceDir.mkdirs()
-            if (!created) {
-                Log.e(TAG, "Failed to create workspace directory")
-                return null
-            }
-            Log.i(TAG, "Created workspace directory: ${workspaceDir.absolutePath}")
-        }
-        
-        return workspaceDir
+    private fun getHomeDirectory(): File? {
+        return File(System.getenv("HOME") ?: "/data/data/com.kilo.companion/files")
     }
     
-    suspend fun readFile(relativePath: String): String? = withContext(Dispatchers.IO) {
+    private fun ensureDirectory(file: File): Boolean {
+        if (!file.exists()) {
+            return file.mkdirs()
+        }
+        return true
+    }
+    
+    suspend fun readFileFromHome(relativePath: String): String? = withContext(Dispatchers.IO) {
         try {
-            val workspaceDir = getWorkspaceDirectory() ?: return@withContext null
-            val file = File(workspaceDir, relativePath)
+            val homeDir = getHomeDirectory() ?: return@withContext null
+            val file = File(homeDir, relativePath)
             
             if (!file.exists() || !file.canRead()) {
                 return@withContext null
@@ -66,12 +83,12 @@ class SharedStorageManager(private val context: Context) {
         }
     }
     
-    suspend fun writeFile(relativePath: String, content: String): Boolean = withContext(Dispatchers.IO) {
+    suspend fun writeFileToHome(relativePath: String, content: String): Boolean = withContext(Dispatchers.IO) {
         try {
-            val workspaceDir = getWorkspaceDirectory() ?: return@withContext false
-            val file = File(workspaceDir, relativePath)
+            val homeDir = getHomeDirectory() ?: return@withContext false
+            val file = File(homeDir, relativePath)
             
-            file.parentFile?.mkdirs()
+            file.parentFile?.let { ensureDirectory(it) }
             file.writeText(content, Charsets.UTF_8)
             
             Log.i(TAG, "Successfully wrote file: ${file.absolutePath}")
@@ -82,22 +99,69 @@ class SharedStorageManager(private val context: Context) {
         }
     }
     
-    fun fileExists(relativePath: String): Boolean {
-        val workspaceDir = getWorkspaceDirectory() ?: return false
-        return File(workspaceDir, relativePath).exists()
+    fun fileExistsInHome(relativePath: String): Boolean {
+        val homeDir = getHomeDirectory() ?: return false
+        return File(homeDir, relativePath).exists()
     }
     
-    fun getWorkspacePath(): String? = getWorkspaceDirectory()?.absolutePath
-    
+    // OpenCode config - checks multiple locations
     suspend fun readOpencodeConfig(): String? {
-        return readFile("$CONFIG_PATH/$FILE_OPENCODE_JSONC") 
-            ?: readFile("$CONFIG_PATH/$FILE_OPENCODE_JSON")
+        // Check in order of priority
+        return readFileFromHome("$HOME_CONFIG_OPENCODE/$FILE_OPENCODE_JSONC")
+            ?: readFileFromHome("$HOME_CONFIG_OPENCODE/$FILE_OPENCODE_JSON")
+            ?: readFileFromHome("$HOME_LOCAL_SHARE_OPENCODE/$FILE_OPENCODE_JSONC")
+            ?: readFileFromHome("$HOME_LOCAL_SHARE_OPENCODE/$FILE_OPENCODE_JSON")
+            ?: readFileFromHome("$HOME_OPENCODE_DIR/$FILE_OPENCODE_JSONC")
+            ?: readFileFromHome("$HOME_OPENCODE_DIR/$FILE_OPENCODE_JSON")
     }
     
     suspend fun writeOpencodeConfig(content: String): Boolean {
-        return writeFile("$CONFIG_PATH/$FILE_OPENCODE_JSON", content)
+        // Write to .config/opencode/ (preferred location)
+        return writeFileToHome("$HOME_CONFIG_OPENCODE/$FILE_OPENCODE_JSON", content)
     }
     
-    suspend fun readAuthFile(): String? = readFile(FILE_AUTH_JSON)
-    suspend fun writeAuthFile(content: String): Boolean = writeFile(FILE_AUTH_JSON, content)
+    suspend fun createDefaultOpencodeConfig(): Boolean {
+        return writeFileToHome("$HOME_CONFIG_OPENCODE/$FILE_OPENCODE_JSON", DEFAULT_CONFIG_OPENCODE)
+    }
+    
+    // Kilo config - checks multiple locations
+    suspend fun readKiloConfig(): String? {
+        return readFileFromHome("$HOME_CONFIG_KILO/$FILE_OPENCODE_JSONC")
+            ?: readFileFromHome("$HOME_CONFIG_KILO/$FILE_OPENCODE_JSON")
+            ?: readFileFromHome("$HOME_LOCAL_SHARE_KILO/$FILE_OPENCODE_JSONC")
+            ?: readFileFromHome("$HOME_LOCAL_SHARE_KILO/$FILE_OPENCODE_JSON")
+    }
+    
+    suspend fun writeKiloConfig(content: String): Boolean {
+        return writeFileToHome("$HOME_CONFIG_KILO/$FILE_OPENCODE_JSON", content)
+    }
+    
+    suspend fun createDefaultKiloConfig(): Boolean {
+        return writeFileToHome("$HOME_CONFIG_KILO/$FILE_OPENCODE_JSON", DEFAULT_CONFIG_KILO)
+    }
+    
+    // Check if config exists
+    fun opencodeConfigExists(): Boolean {
+        return fileExistsInHome("$HOME_CONFIG_OPENCODE/$FILE_OPENCODE_JSONC")
+            || fileExistsInHome("$HOME_CONFIG_OPENCODE/$FILE_OPENCODE_JSON")
+            || fileExistsInHome("$HOME_LOCAL_SHARE_OPENCODE/$FILE_OPENCODE_JSONC")
+            || fileExistsInHome("$HOME_LOCAL_SHARE_OPENCODE/$FILE_OPENCODE_JSON")
+            || fileExistsInHome("$HOME_OPENCODE_DIR/$FILE_OPENCODE_JSONC")
+            || fileExistsInHome("$HOME_OPENCODE_DIR/$FILE_OPENCODE_JSON")
+    }
+    
+    fun kiloConfigExists(): Boolean {
+        return fileExistsInHome("$HOME_CONFIG_KILO/$FILE_OPENCODE_JSONC")
+            || fileExistsInHome("$HOME_CONFIG_KILO/$FILE_OPENCODE_JSON")
+            || fileExistsInHome("$HOME_LOCAL_SHARE_KILO/$FILE_OPENCODE_JSONC")
+            || fileExistsInHome("$HOME_LOCAL_SHARE_KILO/$FILE_OPENCODE_JSON")
+    }
+    
+    suspend fun readAuthFile(): String? {
+        return readFileFromHome("$HOME_LOCAL_SHARE_OPENCODE/$FILE_AUTH_JSON")
+    }
+    
+    suspend fun writeAuthFile(content: String): Boolean {
+        return writeFileToHome("$HOME_LOCAL_SHARE_OPENCODE/$FILE_AUTH_JSON", content)
+    }
 }

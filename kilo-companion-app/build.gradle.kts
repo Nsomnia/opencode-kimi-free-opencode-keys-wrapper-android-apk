@@ -29,5 +29,5 @@ allprojects {
 
 // Clean task - removes all build artifacts
 tasks.register<Delete>("clean") {
-    delete(rootProject.buildDir)
+    delete(layout.buildDirectory)
 }

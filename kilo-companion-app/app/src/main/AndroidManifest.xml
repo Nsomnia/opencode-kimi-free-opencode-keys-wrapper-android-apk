@@ -53,14 +53,15 @@
     <!-- APPLICATION DECLARATION                                                   -->
     <!-- ========================================================================= -->
     <application
-        android:name=".KiloCompanionApplication"
+        android:name=".CodePalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.KiloCompanion"
+        android:theme="@style/Theme.CodePal"
         android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
         tools:targetApi="34">
 
         <!-- ===================================================================== -->
@@ -72,7 +73,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.KiloCompanion"
+            android:theme="@style/Theme.CodePal"
             android:configChanges="orientation|screenSize|smallestScreenSize">
             
             <!-- Main launcher intent - this makes the app appear in the launcher -->
@@ -92,7 +93,7 @@
         <activity
             android:name=".AuthHandlerActivity"
             android:exported="true"
-            android:theme="@style/Theme.KiloCompanion.NoActionBar"
+            android:theme="@style/Theme.CodePal.NoActionBar"
             android:launchMode="singleTask"
             android:noHistory="true"
             android:excludeFromRecents="true">

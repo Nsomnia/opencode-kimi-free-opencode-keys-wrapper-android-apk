@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Kilo Companion</string>
+    <string name="app_name">CodePal</string>
     <string name="nav_home">Home</string>
     <string name="nav_config">Config</string>
     <string name="nav_webview">WebView</string>
