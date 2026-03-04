@@ -81,6 +81,7 @@ drawable ic_call_answer_video
 drawable ic_call_answer_video_low
 drawable ic_call_decline
 drawable ic_call_decline_low
+drawable ic_launcher_foreground
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -294,8 +295,8 @@ style TextAppearance_Compat_Notification_Info
 style TextAppearance_Compat_Notification_Line2
 style TextAppearance_Compat_Notification_Time
 style TextAppearance_Compat_Notification_Title
-style Theme_KiloCompanion
-style Theme_KiloCompanion_NoActionBar
+style Theme_CodePal
+style Theme_CodePal_NoActionBar
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 styleable ActivityNavigator android_name action data dataPattern targetPackage

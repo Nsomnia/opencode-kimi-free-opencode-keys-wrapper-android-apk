@@ -131,8 +131,11 @@ class NodeService : Service() {
     }
     
     private suspend fun monitorNodeProcess() {
-        while (isActive && runtime.isRunning.value) {
+        while (runtime.isRunning.value) {
             delay(5000) // Check every 5 seconds
+            
+            // Check if job is still active
+            if (serviceJob?.isActive != true) break
             
             // Update notification with status
             val msgCount = runtime.messages.value.size

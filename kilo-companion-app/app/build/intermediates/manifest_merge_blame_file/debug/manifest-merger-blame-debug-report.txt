@@ -32,57 +32,57 @@
 32
 33    <!-- Internet access - required for WebView and OAuth flows -->
 34    <uses-permission android:name="android.permission.INTERNET" />
-34-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:28:5-67
-34-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:28:22-64
+34-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:27:5-67
+34-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:27:22-64
 35
 36    <!-- Network state - allows checking if network is available -->
 37    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-37-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:31:5-79
-37-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:31:22-76
+37-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:30:5-79
+37-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:30:22-76
 38
 39    <!-- Storage permissions for Android 10 (API 29) and below -->
 40    <uses-permission
-40-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:34:5-35:38
+40-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:33:5-34:38
 41        android:name="android.permission.READ_EXTERNAL_STORAGE"
-41-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:34:22-77
+41-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:33:22-77
 42        android:maxSdkVersion="32" />
-42-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:35:9-35
+42-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:34:9-35
 43    <uses-permission
-43-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:36:5-38:40
+43-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:35:5-37:40
 44        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-44-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:36:22-78
+44-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:35:22-78
 45        android:maxSdkVersion="32" />
-45-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:37:9-35
+45-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:36:9-35
 46
 47    <!-- For Android 11+ (API 30+), we need MANAGE_EXTERNAL_STORAGE for broad access -->
 48    <!-- This is required to access Documents/KiloWorkspace directory -->
 49    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-49-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:42:5-43:40
-49-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:42:22-79
+49-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:41:5-42:40
+49-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:41:22-79
 50
 51    <!-- Access to all files on Android 13+ (API 33+) -->
 52    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-52-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:46:5-47:46
-52-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:46:22-73
+52-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:45:5-46:46
+52-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:45:22-73
 53    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
-53-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:48:5-49:46
-53-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:48:22-72
+53-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:47:5-48:46
+53-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:47:22-72
 54    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
-54-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:50:5-75
-54-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:50:22-72
+54-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:49:5-75
+54-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:49:22-72
 55
 56    <!-- Foreground service permission for Node.js runtime -->
 57    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-57-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:53:5-77
-57-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:53:22-74
+57-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:52:5-77
+57-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:52:22-74
 58    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
-58-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:54:5-87
-58-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:54:22-84
+58-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:53:5-87
+58-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:53:22-84
 59
 60    <!-- Post notifications (Android 13+) -->
 61    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-61-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:57:5-77
-61-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:57:22-74
+61-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:56:5-77
+61-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:56:22-74
 62
 63    <permission
 63-->[androidx.core:core:1.12.0] /home/nsomnia/.gradle/caches/transforms-4/d15e3cf9deff4bed9af3ebc1542b46ca/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
@@ -97,29 +97,29 @@
 68    <!-- APPLICATION DECLARATION -->
 69    <!-- ========================================================================= -->
 70    <application
-70-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:62:5-180:19
+70-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:61:5-179:19
 71        android:name="com.kilo.companion.CodePalApplication"
-71-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:63:9-43
+71-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:62:9-43
 72        android:allowBackup="true"
-72-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:64:9-35
+72-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:63:9-35
 73        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 73-->[androidx.core:core:1.12.0] /home/nsomnia/.gradle/caches/transforms-4/d15e3cf9deff4bed9af3ebc1542b46ca/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 74        android:debuggable="true"
 75        android:extractNativeLibs="false"
 76        android:icon="@mipmap/ic_launcher"
-76-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:65:9-43
+76-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:64:9-43
 77        android:label="@string/app_name"
-77-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:66:9-41
+77-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:65:9-41
 78        android:requestLegacyExternalStorage="true"
-78-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:70:9-52
+78-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:69:9-52
 79        android:roundIcon="@mipmap/ic_launcher_round"
-79-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:67:9-54
+79-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:66:9-54
 80        android:supportsRtl="true"
-80-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:68:9-35
+80-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:67:9-35
 81        android:theme="@style/Theme.CodePal"
-81-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:69:9-45
+81-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:68:9-45
 82        android:usesCleartextTraffic="true" >
-82-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:71:9-44
+82-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:70:9-44
 83
 84        <!-- ===================================================================== -->
 85        <!-- MAIN ACTIVITY -->
@@ -128,26 +128,26 @@
 88        <!-- the app icon. It hosts all the Compose UI screens via navigation. -->
 89        <!-- ===================================================================== -->
 90        <activity
-90-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:80:9-91:20
+90-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:79:9-90:20
 91            android:name="com.kilo.companion.MainActivity"
-91-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:81:13-41
+91-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:80:13-41
 92            android:configChanges="orientation|screenSize|smallestScreenSize"
-92-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:84:13-78
+92-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:83:13-78
 93            android:exported="true"
-93-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:82:13-36
+93-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:81:13-36
 94            android:theme="@style/Theme.CodePal" >
-94-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:83:13-49
+94-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:82:13-49
 95
 96            <!-- Main launcher intent - this makes the app appear in the launcher -->
 97            <intent-filter>
-97-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:87:13-90:29
+97-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:86:13-89:29
 98                <action android:name="android.intent.action.MAIN" />
-98-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:88:17-69
-98-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:88:25-66
+98-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:87:17-69
+98-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:87:25-66
 99
 100                <category android:name="android.intent.category.LAUNCHER" />
-100-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:89:17-77
-100-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:89:27-74
+100-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:88:17-77
+100-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:88:27-74
 101            </intent-filter>
 102        </activity>
 103
@@ -159,141 +159,141 @@
 109        <!-- callbacks that the CLI tools use for authentication. -->
 110        <!-- ===================================================================== -->
 111        <activity
-111-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:100:9-150:20
+111-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:99:9-149:20
 112            android:name="com.kilo.companion.AuthHandlerActivity"
-112-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:101:13-48
+112-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:100:13-48
 113            android:excludeFromRecents="true"
-113-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:106:13-46
+113-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:13-46
 114            android:exported="true"
-114-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:102:13-36
+114-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:101:13-36
 115            android:launchMode="singleTask"
-115-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:104:13-44
+115-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:103:13-44
 116            android:noHistory="true"
-116-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:105:13-37
+116-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:104:13-37
 117            android:theme="@style/Theme.CodePal.NoActionBar" >
-117-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:103:13-61
+117-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:102:13-61
 118
 119            <!-- Intent filter for OpenCode custom URI scheme -->
 120            <intent-filter>
-120-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:109:13-114:29
+120-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:108:13-113:29
 121                <action android:name="android.intent.action.VIEW" />
-121-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:17-69
-121-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:25-66
+121-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:109:17-69
+121-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:109:25-66
 122
 123                <category android:name="android.intent.category.DEFAULT" />
-123-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:17-76
-123-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:27-73
+123-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:17-76
+123-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:27-73
 124                <category android:name="android.intent.category.BROWSABLE" />
-124-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-78
-124-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:27-75
+124-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:17-78
+124-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:27-75
 125
 126                <data
-126-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:17-71
+126-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-71
 127                    android:host="auth"
-127-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:49-68
+127-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:49-68
 128                    android:scheme="opencode" />
-128-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:23-48
+128-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:23-48
 129            </intent-filter>
 130
 131            <!-- Intent filter for Kilo custom URI scheme -->
 132            <intent-filter>
-132-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:117:13-122:29
+132-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:116:13-121:29
 133                <action android:name="android.intent.action.VIEW" />
-133-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:17-69
-133-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:25-66
+133-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:109:17-69
+133-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:109:25-66
 134
 135                <category android:name="android.intent.category.DEFAULT" />
-135-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:17-76
-135-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:27-73
+135-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:17-76
+135-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:27-73
 136                <category android:name="android.intent.category.BROWSABLE" />
-136-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-78
-136-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:27-75
+136-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:17-78
+136-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:27-75
 137
 138                <data
-138-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:17-71
+138-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-71
 139                    android:host="auth"
-139-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:49-68
+139-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:49-68
 140                    android:scheme="kilo" />
-140-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:23-48
+140-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:23-48
 141            </intent-filter>
 142
 143            <!-- Intent filter for localhost callbacks on various ports -->
 144            <!-- CLI tools often listen on localhost:PORT for OAuth callbacks -->
 145            <intent-filter>
-145-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:126:13-132:29
+145-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:125:13-131:29
 146                <action android:name="android.intent.action.VIEW" />
-146-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:17-69
-146-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:25-66
+146-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:109:17-69
+146-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:109:25-66
 147
 148                <category android:name="android.intent.category.DEFAULT" />
-148-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:17-76
-148-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:27-73
+148-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:17-76
+148-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:27-73
 149                <category android:name="android.intent.category.BROWSABLE" />
-149-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-78
-149-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:27-75
+149-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:17-78
+149-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:27-75
 150
 151                <data
-151-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:17-71
+151-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-71
 152                    android:host="127.0.0.1"
-152-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:49-68
+152-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:49-68
 153                    android:scheme="http" />
-153-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:23-48
+153-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:23-48
 154                <data
-154-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:17-71
+154-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-71
 155                    android:host="localhost"
-155-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:49-68
+155-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:49-68
 156                    android:scheme="http" />
-156-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:23-48
+156-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:23-48
 157            </intent-filter>
 158
 159            <!-- HTTPS localhost variants -->
 160            <intent-filter>
-160-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:135:13-141:29
+160-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:134:13-140:29
 161                <action android:name="android.intent.action.VIEW" />
-161-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:17-69
-161-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:25-66
+161-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:109:17-69
+161-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:109:25-66
 162
 163                <category android:name="android.intent.category.DEFAULT" />
-163-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:17-76
-163-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:27-73
+163-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:17-76
+163-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:27-73
 164                <category android:name="android.intent.category.BROWSABLE" />
-164-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-78
-164-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:27-75
+164-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:17-78
+164-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:27-75
 165
 166                <data
-166-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:17-71
+166-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-71
 167                    android:host="127.0.0.1"
-167-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:49-68
+167-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:49-68
 168                    android:scheme="https" />
-168-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:23-48
+168-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:23-48
 169                <data
-169-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:17-71
+169-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-71
 170                    android:host="localhost"
-170-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:49-68
+170-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:49-68
 171                    android:scheme="https" />
-171-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:23-48
+171-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:23-48
 172            </intent-filter>
 173
 174            <!-- GitHub OAuth callback handler -->
 175            <intent-filter>
-175-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:144:13-149:29
+175-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:143:13-148:29
 176                <action android:name="android.intent.action.VIEW" />
-176-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:17-69
-176-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:25-66
+176-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:109:17-69
+176-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:109:25-66
 177
 178                <category android:name="android.intent.category.DEFAULT" />
-178-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:17-76
-178-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:27-73
+178-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:17-76
+178-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:110:27-73
 179                <category android:name="android.intent.category.BROWSABLE" />
-179-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-78
-179-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:27-75
+179-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:17-78
+179-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:111:27-75
 180
 181                <data
-181-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:17-71
+181-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:17-71
 182                    android:host="oauth"
-182-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:49-68
+182-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:49-68
 183                    android:scheme="com.kilo.companion" />
-183-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:113:23-48
+183-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:112:23-48
 184            </intent-filter>
 185        </activity>
 186
@@ -305,19 +305,19 @@
 192        <!-- ===================================================================== -->
 193        <provider
 194            android:name="androidx.core.content.FileProvider"
-194-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:159:13-62
+194-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:158:13-62
 195            android:authorities="com.kilo.companion.fileprovider"
-195-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:160:13-64
+195-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:159:13-64
 196            android:exported="false"
-196-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:161:13-37
+196-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:160:13-37
 197            android:grantUriPermissions="true" >
-197-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:162:13-47
+197-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:161:13-47
 198            <meta-data
-198-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:163:13-165:54
+198-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:162:13-164:54
 199                android:name="android.support.FILE_PROVIDER_PATHS"
-199-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:164:17-67
+199-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:163:17-67
 200                android:resource="@xml/file_paths" />
-200-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:165:17-51
+200-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:164:17-51
 201        </provider>
 202
 203        <!-- ===================================================================== -->
@@ -327,15 +327,15 @@
 207        <!-- opencode and kilo CLI tools. Keeps the AI environment running. -->
 208        <!-- ===================================================================== -->
 209        <service
-209-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:174:9-178:56
+209-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:173:9-177:56
 210            android:name="com.kilo.companion.nodejs.NodeService"
-210-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:175:13-47
+210-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:174:13-47
 211            android:enabled="true"
-211-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:176:13-35
+211-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:175:13-35
 212            android:exported="false"
-212-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:177:13-37
+212-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:176:13-37
 213            android:foregroundServiceType="dataSync" />
-213-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:178:13-53
+213-->/home/nsomnia/Documents/opencode-kimi-free-opencode-keys-wrapper-android-apk/kilo-companion-app/app/src/main/AndroidManifest.xml:177:13-53
 214
 215        <activity
 215-->[androidx.compose.ui:ui-test-manifest:1.6.1] /home/nsomnia/.gradle/caches/transforms-4/7684c1b9dabf021d0f3764901ba60560/transformed/jetified-ui-test-manifest-1.6.1/AndroidManifest.xml:23:9-25:39

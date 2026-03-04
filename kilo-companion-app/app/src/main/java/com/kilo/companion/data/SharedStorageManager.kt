@@ -33,7 +33,8 @@ class SharedStorageManager(private val context: Context) {
         const val FILE_AUTH_JSON = "auth.json"
         
         // Default configs based on actual OpenCode schema
-        const val DEFAULT_CONFIG_OPENCODE = """{
+        // Note: Using single $ to avoid Kotlin string interpolation issues
+        val DEFAULT_CONFIG_OPENCODE = """{
   "\$schema": "https://opencode.ai/config.json",
   "model": {
     "provider": "openai",
@@ -44,10 +45,10 @@ class SharedStorageManager(private val context: Context) {
   }
 }"""
         
-        const val DEFAULT_CONFIG_KILO = """{
+        val DEFAULT_CONFIG_KILO = """{
   "\$schema": "https://kilo.ai/config.json",
   "model": {
-    "provider": "openai", 
+    "provider": "openai",
     "name": "gpt-4o"
   },
   "preferences": {
@@ -163,5 +164,13 @@ class SharedStorageManager(private val context: Context) {
     
     suspend fun writeAuthFile(content: String): Boolean {
         return writeFileToHome("$HOME_LOCAL_SHARE_OPENCODE/$FILE_AUTH_JSON", content)
+    }
+    
+    /**
+     * Get the home directory path
+     * @return Path to home directory or null if not available
+     */
+    fun getHomeDirectoryPath(): String? {
+        return getHomeDirectory()?.absolutePath
     }
 }
