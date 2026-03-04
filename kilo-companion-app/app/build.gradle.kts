@@ -6,6 +6,7 @@
 // - Dependencies (libraries the app uses)
 // - Build types (debug vs release)
 // - Compilation options
+// - NDK/Native code support for Node.js integration
 // =============================================================================
 
 plugins {
@@ -26,10 +27,6 @@ android {
     // -----------------------------------------------------------------------------
     // SDK Configuration
     // -----------------------------------------------------------------------------
-    // compileSdk: The version of Android SDK used to compile the app
-    // targetSdk: The highest Android version the app is tested against
-    // minSdk: The lowest Android version the app supports
-    // -----------------------------------------------------------------------------
     compileSdk = 34
     
     defaultConfig {
@@ -46,21 +43,28 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        
+        // NDK configuration for Node.js integration
+        externalNativeBuild {
+            cmake {
+                cppFlags += "-std=c++17"
+                arguments += "-DANDROID_STL=c++_shared"
+            }
+        }
+        
+        ndk {
+            abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86_64", "x86")
+        }
     }
     
     // -----------------------------------------------------------------------------
     // Build Types
     // -----------------------------------------------------------------------------
-    // Debug: Development builds with debugging enabled
-    // Release: Production builds with optimizations
-    // -----------------------------------------------------------------------------
     buildTypes {
         release {
-            // Enable code shrinking and obfuscation
             isMinifyEnabled = true
             isShrinkResources = true
             
-            // ProGuard rules for code shrinking
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -68,9 +72,18 @@ android {
         }
         
         debug {
-            // Debug builds don't shrink code for faster builds
             isMinifyEnabled = false
             isDebuggable = true
+        }
+    }
+    
+    // -----------------------------------------------------------------------------
+    // Native Build Configuration
+    // -----------------------------------------------------------------------------
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
+            version = "3.22.1"
         }
     }
     
@@ -91,6 +104,7 @@ android {
     // -----------------------------------------------------------------------------
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     
     composeOptions {
@@ -104,84 +118,61 @@ android {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
+        jniLibs {
+            pickFirsts += listOf("**/libnodejs-mobile.so")
+        }
     }
 }
 
 // =============================================================================
 // Dependencies
 // =============================================================================
-// These are external libraries that our app uses.
-// Organized by category for clarity.
-// =============================================================================
 
 dependencies {
-    // -----------------------------------------------------------------------------
     // AndroidX Core Libraries
-    // -----------------------------------------------------------------------------
-    // These provide fundamental Android functionality
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.activity:activity-compose:1.8.2")
     
-    // -----------------------------------------------------------------------------
-    // Jetpack Compose BOM (Bill of Materials)
-    // -----------------------------------------------------------------------------
-    // Using BOM ensures all Compose libraries are compatible versions
+    // Jetpack Compose BOM
     val composeBom = platform("androidx.compose:compose-bom:2024.02.00")
     implementation(composeBom)
     androidTestImplementation(composeBom)
     
     // Compose UI libraries
-    implementation("androidx.compose.ui:ui")                    // Core UI components
-    implementation("androidx.compose.ui:ui-graphics")           // Graphics primitives
-    implementation("androidx.compose.ui:ui-tooling-preview")    // Preview support
-    implementation("androidx.compose.material3:material3")      // Material Design 3
-    implementation("androidx.compose.material:material-icons-extended") // Extended icons
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.material:material-icons-extended")
     
-    // Navigation for Compose - enables screen-to-screen navigation
+    // Navigation
     implementation("androidx.navigation:navigation-compose:2.7.7")
     
-    // ViewModel for Compose - lifecycle-aware data management
+    // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-service:2.7.0")
     
-    // -----------------------------------------------------------------------------
-    // Storage & File System
-    // -----------------------------------------------------------------------------
-    // DocumentFile for SAF (Storage Access Framework) operations
+    // Storage
     implementation("androidx.documentfile:documentfile:1.0.1")
     
-    // -----------------------------------------------------------------------------
     // JSON Processing
-    // -----------------------------------------------------------------------------
-    // Kotlinx Serialization for JSON parsing
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
-    
-    // Gson as a fallback JSON parser (widely used, good for edge cases)
     implementation("com.google.code.gson:gson:2.10.1")
     
-    // -----------------------------------------------------------------------------
-    // WebView Enhancements
-    // -----------------------------------------------------------------------------
-    // Accompanist WebView - better WebView integration with Compose
+    // WebView
     implementation("com.google.accompanist:accompanist-webview:0.32.0")
     
-    // -----------------------------------------------------------------------------
     // Coroutines
-    // -----------------------------------------------------------------------------
-    // Kotlin Coroutines for async operations (file I/O, network)
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     
-    // -----------------------------------------------------------------------------
     // Testing
-    // -----------------------------------------------------------------------------
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     
-    // -----------------------------------------------------------------------------
-    // Debug Tools
-    // -----------------------------------------------------------------------------
+    // Debug
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
