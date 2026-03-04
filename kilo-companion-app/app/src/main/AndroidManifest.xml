@@ -49,6 +49,13 @@
         tools:ignore="SelectedPhotoAccess" />
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
 
+    <!-- Foreground service permission for Node.js runtime -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    
+    <!-- Post notifications (Android 13+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <!-- ========================================================================= -->
     <!-- APPLICATION DECLARATION                                                   -->
     <!-- ========================================================================= -->
@@ -157,6 +164,18 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <!-- ===================================================================== -->
+        <!-- NODE.JS SERVICE                                                       -->
+        <!-- ===================================================================== -->
+        <!-- Foreground service that manages the Node.js runtime for running     -->
+        <!-- opencode and kilo CLI tools. Keeps the AI environment running.      -->
+        <!-- ===================================================================== -->
+        <service
+            android:name=".nodejs.NodeService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
 
     </application>
 

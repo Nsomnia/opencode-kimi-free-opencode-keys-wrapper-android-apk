@@ -1,7 +1,7 @@
 // =============================================================================
 // MainActivity.kt
 // =============================================================================
-// The main entry point of the Kilo Companion app with navigation.
+// The main entry point of the CodePal app with navigation.
 // =============================================================================
 
 package com.kilo.companion
@@ -21,6 +21,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Web
+import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -34,6 +36,7 @@ import androidx.navigation.compose.rememberNavController
 import com.kilo.companion.ui.screens.ConfigManagerScreen
 import com.kilo.companion.ui.screens.HomeScreen
 import com.kilo.companion.ui.screens.WebViewScreen
+import com.kilo.companion.ui.screens.RuntimeScreen
 import com.kilo.companion.ui.theme.KiloCompanionTheme
 import com.kilo.companion.data.SharedStorageManager
 
@@ -41,6 +44,7 @@ data class NavDestination(val route: String, val label: String, val icon: ImageV
 
 val navDestinations = listOf(
     NavDestination("home", "Home", Icons.Default.Home),
+    NavDestination("runtime", "Runtime", Icons.Default.PlayArrow),
     NavDestination("config", "Config", Icons.Default.Edit),
     NavDestination("webview", "WebView", Icons.Default.Web)
 )
@@ -70,15 +74,24 @@ fun MainApp() {
     ) { permissions ->
         hasPermissions = permissions.all { it.value }
         if (!hasPermissions) {
-            Toast.makeText(context, "Storage permissions required", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Storage permissions required for file access", Toast.LENGTH_LONG).show()
         }
     }
     
     LaunchedEffect(Unit) {
-        val permissionsToRequest = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            arrayOf(Manifest.permission.READ_MEDIA_IMAGES)
+        val permissionsToRequest = mutableListOf<String>()
+        
+        // Storage permissions
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            permissionsToRequest.add(Manifest.permission.READ_MEDIA_IMAGES)
         } else {
-            arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE)
+            permissionsToRequest.add(Manifest.permission.READ_EXTERNAL_STORAGE)
+            permissionsToRequest.add(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        }
+        
+        // Notification permission (Android 13+)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            permissionsToRequest.add(Manifest.permission.POST_NOTIFICATIONS)
         }
         
         val allGranted = permissionsToRequest.all {
@@ -86,7 +99,7 @@ fun MainApp() {
         }
         
         if (!allGranted) {
-            permissionLauncher.launch(permissionsToRequest)
+            permissionLauncher.launch(permissionsToRequest.toTypedArray())
         } else {
             hasPermissions = true
         }
@@ -101,6 +114,7 @@ fun MainApp() {
             modifier = Modifier.padding(innerPadding)
         ) {
             composable("home") { HomeScreen(storageManager) }
+            composable("runtime") { RuntimeScreen() }
             composable("config") { ConfigManagerScreen(storageManager) }
             composable("webview") { WebViewScreen() }
         }
